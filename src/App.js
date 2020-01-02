@@ -45,7 +45,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
       backgroundRepeat: `no-repeat`,
       backgroundSize: `110%`,
       textAlign: `center`,
-      backgroundColor: `#C4C4C4`
+      backgroundColor: `#C4C4C4`,
+      boxShadow: `4px 4px 4px rgba(0, 0, 0, 0.25)`
     }
 
     const icon = {
@@ -54,18 +55,14 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
     }
 
     const headingStyle = {
-      margin: `0`,
-      paddingLeft: `200px`,
-      position: `absolute`,      
-      fontFamily: `Roboto`,
+      margin: `0`, 
       fontStyle: `normal`,
       fontWeight: `900`,
       fontSize: `150px`,
-      lineHeight: `218.69%`,
-      /* or 394px */
+      lineHeight: `250.69%`,
       letterSpacing: `0.155em`,
       textIndent: `38px`,
-      color: `#000000`
+      color: `#FFFFFF`,
     }
     const weatherStyle = {
       fontSize: `30px`,
@@ -87,12 +84,36 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
 
     const all = {
       height: `100vh`,
+      textAlign: `center`,
       width: `auto`,
       backgroundImage: `url(${geralt})`,
       backgroundRepeat: `no-repeat`,
       backgroundSize: `160vh`,
       backgroundPosition: `center`,
-      backgroundColor: `#E5E5E5`
+      backgroundColor: `#E5E5E5`,
+    }
+
+    const searchbarStyle = {
+      fontSize: `30px`,
+      width: `150vh`,
+      height: `100px`,
+      background: `rgba(196, 196, 196, 0.8)`,
+      border: `5px solid #FFFFFF`,
+      boxSizing: `border-box`,
+      borderRadius: `20px`,
+    }
+
+    const seeAll = {
+      fontSize: `30px`,
+      width: `73vh`,
+      height: `100px`,
+      background: `rgba(196, 196, 196, 0.8)`,
+      border: `5px solid #FFFFFF`,
+      boxSizing: `border-box`,
+      borderRadius: `20px`,
+      marginTop: `1%`,
+      marginLeft: `15px`,
+      marginRight: `15px`
     }
 
     return (
@@ -101,10 +122,16 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
           
           <p style={weatherStyle}>It's {Math.ceil(this.state.temp - 273)} degrees in {this.state.location}.<span>    </span>
             <img alt="" style={icon} src={`http://openweathermap.org/img/w/${this.state.icon}.png`} />
-            
           </p>
                      
         </div>
+        <p style={headingStyle}>Hello, Alex</p>
+        <button style={searchbarStyle}>Search</button>
+        <br></br>
+        <span>
+        <button style={seeAll}>See All</button>
+        <button style={seeAll}>Add</button>
+        </span>
       </div>
 
     )
