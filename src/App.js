@@ -1,15 +1,21 @@
-import React from 'react';
+
 import axios from 'axios';
 import geralt from './images/geralt.png';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import CreateNew from "./components/CreateNew.component";
+import Search from "./components/Search.component";
+import ShowAll from "./components/ShowAll.component";
 import './App.css';
-
 
 export default class apis extends React.Component {
   state = {
     weather: [],
     location: [],
     temp: [],
-    icon: []
+    icon: [],
+    search: ''
   }
 
   componentDidMount() {
@@ -36,6 +42,10 @@ var yyyy = today.getFullYear();
 if (dd < 10) {
   dd = '0' + dd;
 } 
+
+
+
+
 today = dd + ` ` + months[mm] + ' ' + yyyy;
     const containerStyle = {
       margin: '0 !important',
@@ -119,6 +129,12 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
     }
 
     return (
+      <Router>
+        <Route path="/search" exact component={Search} />
+        <Route path="/all" component={ShowAll} />
+        <Route path="/create" component={CreateNew} />
+
+
       <div style={all}>
         <div style={containerStyle}>
           
@@ -128,13 +144,15 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
                      
         </div>
         <p style={headingStyle}>Hello, Alex</p>
-        <input type="search" placeholder="Search" style={searchbarStyle}></input>
+        <input value={this.state.search} type="search" placeholder="Search" style={searchbarStyle}></input>
         <br></br>
         <span>
         <button style={seeAll}>See All</button>
         <button style={seeAll}>Add</button>
         </span>
       </div>
+      </Router>
+
 
     )
     
