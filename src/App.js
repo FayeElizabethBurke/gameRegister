@@ -63,6 +63,7 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
       letterSpacing: `0.155em`,
       textIndent: `38px`,
       color: `#FFFFFF`,
+      textShadow: `2px 2px 3px black`
     }
     const weatherStyle = {
       fontSize: `30px`,
@@ -99,8 +100,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
       height: `100px`,
       background: `rgba(196, 196, 196, 0.8)`,
       border: `5px solid #FFFFFF`,
-      boxSizing: `border-box`,
-      borderRadius: `20px`,
+      textAlign: `center`,
+      boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
     }
 
     const seeAll = {
@@ -113,7 +114,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
       borderRadius: `20px`,
       marginTop: `1%`,
       marginLeft: `15px`,
-      marginRight: `15px`
+      marginRight: `15px`,
+      boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
     }
 
     return (
@@ -126,7 +128,7 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
                      
         </div>
         <p style={headingStyle}>Hello, Alex</p>
-        <button style={searchbarStyle}>Search</button>
+        <input type="search" placeholder="Search" style={searchbarStyle}></input>
         <br></br>
         <span>
         <button style={seeAll}>See All</button>
