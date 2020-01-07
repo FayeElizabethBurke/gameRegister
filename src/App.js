@@ -58,6 +58,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
       backgroundColor: `#C4C4C4`,
       boxShadow: `4px 4px 4px rgba(0, 0, 0, 0.25)`
     }
+    
+
 
     const icon = {
       height: `50px`,
@@ -147,8 +149,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
         <input value={this.state.search} type="search" placeholder="Search" style={searchbarStyle}></input>
         <br></br>
         <span>
-        <button style={seeAll}>See All</button>
-        <button style={seeAll}>Add</button>
+        <a href="http://localhost:3000/all" ><button style={seeAll}>Show All</button></a>
+        <a href="http://localhost:3000/create" ><button style={seeAll}>Add</button></a>
         </span>
       </div>
       </Router>
