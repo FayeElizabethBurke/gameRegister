@@ -40,7 +40,7 @@ const exitButton = {
 <div style={createNewDiv}>
     <div style={content}>
     <span>
-        <a href="http://localhost:3000/" ><button style={exitButton}>Back</button></a>
+        <a href="https://laughing-einstein-674f51.netlify.com/" ><button style={exitButton}>Back</button></a>
     </span>
     </div>
 

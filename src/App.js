@@ -149,8 +149,8 @@ today = dd + ` ` + months[mm] + ' ' + yyyy;
         <input value={this.state.search} type="search" placeholder="Search" style={searchbarStyle}></input>
         <br></br>
         <span>
-        <a href="http://localhost:3000/all" ><button style={seeAll}>Show All</button></a>
-        <a href="http://localhost:3000/create" ><button style={seeAll}>Add</button></a>
+        <a href="https://laughing-einstein-674f51.netlify.com/all" ><button style={seeAll}>Show All</button></a>
+        <a href="https://laughing-einstein-674f51.netlify.com//create" ><button style={seeAll}>Add</button></a>
         </span>
       </div>
       </Router>
